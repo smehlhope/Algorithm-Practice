@@ -143,13 +143,11 @@ function greaterY(arr,Y) {
 // Given any array x, say [1, 5, 10, -2], create an algorithm (sets of instructions) that multiplies 
 // each value in the array by itself.  When the program is done, the array x should have values 
 // that have been squared, say [1, 25, 100, 4].
-function squaredValue(arr) {
-	var sqrArr = [];
-	for (var i = 0; i < arr.length; i++) {
-		var sqd = arr[i] * arr[i];
-		sqrArr.push(sqd);
-	}
-	return sqrArr;
+function squareVal(arr) {
+   for (var i = 0; i<arr.length; i++) {
+       arr[i] = arr[i]*arr[i];
+   }
+   return arr; 
 }
 squaredValue([1, 5, 10, -2]);
  
@@ -219,9 +217,7 @@ function maxMinAvg(arr) {
  
 
 // Shifting the values in the array
-// Given any array x, say [1, 5, 10, 7, -2], create an algorithm that shifts each number 
-// by one to the front.  For example, when the program is done, an x of [1, 5, 10, 7, -2] 
-// should become [5, 10, 7, -2, 0].
+// Write a function that takes an array as an argument and return an array with the first and last values swapped.
  function swapfirstlast (arr) {
     var firstnum = arr.shift();
     var lastnum = arr.pop();
