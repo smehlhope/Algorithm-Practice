@@ -75,6 +75,15 @@ function findAvg(arr) {
 	}
 	console.log(avg);
 }
+
+function fdAvg(arr) {
+  sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i]
+  }
+ average = sum / arr.length
+ console.log(average);
+}
  
 
 // Array with Odd Numbers
@@ -91,6 +100,14 @@ function oddNumbers() {
 }
 oddNumbers();
  
+ function oddNums() {
+  var num = 0;
+  var y = [];
+  for (var num=1; num <=255; i=i+2) {
+    Y.push(num);
+  }
+ }
+ oddNums();
 
 // Greater Than y
 // Write a program that takes an array and returns the number of values in that array whose 
@@ -167,21 +184,49 @@ function maxMinAvg(arr) {
    return [max, min, avg];
  }
  console.log(maxMinAvg([1, 5, 10, -2]));
+
+ function mma(arr) {
+  var max = arr[0];
+  var min = arr[0];
+  var sum = 0;
+  sum = sum + arr[0];
+  for (var i = 1; i< arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+    sum = sum + arr[i];
+    var avg = sum/arr.length;
+  }
+  return [max, min, avg];
+ }
  
 
 // Shifting the values in the array
 // Given any array x, say [1, 5, 10, 7, -2], create an algorithm that shifts each number 
 // by one to the front.  For example, when the program is done, an x of [1, 5, 10, 7, -2] 
 // should become [5, 10, 7, -2, 0].
- function swap(arr) {
+ function swapfirstlast (arr) {
     var firstnum = arr.shift();
     var lastnum = arr.pop();
     arr.unshift(lastnum);
     arr.push(firstnum);
    return arr; 
 }
-console.log(swap([1, 5, 10, 7, -2]));
+console.log(swapfirstlast([1, 5, 10, 7, -2]));
  
+// Shift all values of a given array up one place and replace the last number with 0.
+ function move(arr) {
+  for (var i = 0; i < arr.length - 1; i++) {
+    //arr.length - 1 because otherwise would get an error since there is nothing past the last 
+    // number. So, you'll "manuall" set the last array value to 0
+    arri] = arr[i+1];
+  }
+  arr[arr.length-1] = 0;
+ }
+
 
 // Number to string
 // Write a program that takes an array of numbers and replaces any negative number with the string 
