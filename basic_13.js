@@ -11,7 +11,10 @@ for (var i = 0; i <= 255; i++) {
 	if (i % 2 !== 0) {
 		console.log(i);
 	}
-};
+}
+for (var i = 1; i <=255; i=i+2) {
+  console.log(i);
+}
  
 
 // Print Sum
@@ -42,7 +45,17 @@ function iterPrint(arr) {
 	}
 };
 iterPrint(arr);
- 
+
+//Iterate an array
+//Write a function that takes an array as an argument and iterates through each member of the array and 
+//returns the sum of all the values.
+function iterArr(arr) {
+    var sum = 0;
+   for (var i = 0; i< arr.length; i++) {
+       sum = sum + arr[i];
+   }
+   return sum; 
+}
 
 // Find Max
 // Write a program (sets of instructions) that takes any array and prints the maximum value 
@@ -108,6 +121,7 @@ oddNumbers();
   }
  }
  oddNums();
+
 
 // Greater Than y
 // Write a program that takes an array and returns the number of values in that array whose 
